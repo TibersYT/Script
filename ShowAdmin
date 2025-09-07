@@ -1,0 +1,3 @@
+game.Players.LocalPlayer.PlayerGui.HDAdminInterface.MainFrame.Visible= true
+game.Players.LocalPlayer.PlayerGui.HDAdminInterface.MainFrame.Pages.Home.Visible= false
+game.Players.LocalPlayer.PlayerGui.HDAdminInterface.MainFrame.Pages.Moderation.Visible= true

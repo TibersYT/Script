@@ -30,7 +30,7 @@ local args = {
                 ["Text2"] = "\232\182\133\231\186\167\233\171\152"
             }
         },
-        ["DisplayName"] = "SlayerSword"
+        ["DisplayName"] = "_SlayerSword"
     }
 }
 
@@ -49,7 +49,7 @@ local args = {
                 ["Text2"] = "\232\182\133\231\186\167\233\171\152"
             }
         },
-        ["DisplayName"] = "B-Fists"
+        ["DisplayName"] = "_B-Fists"
     }
 }
 

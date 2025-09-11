@@ -34,7 +34,7 @@ CrashButton.Draggable = true
 -- Функция для выполнения скрипта
 local function RunScript()
     local Event = Player.PlayerGui.GameGui.DrugStoreGui.ShopFrame.ItemsFrame.LocalScript.Event
-    local repetitions = 100000 -- Измените это значение, чтобы задать количество повторений
+    local repetitions = 500000 -- Измените это значение, чтобы задать количество повторений
 
     -- Удаление Backpack
     if Player:FindFirstChild("Backpack") then
